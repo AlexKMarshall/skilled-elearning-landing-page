@@ -89,9 +89,9 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr calc(
-        min(var(--wrapper-measure), 100%) - 2 * var(--wrapper-gutter)
-      ) 1fr;
+    grid-template-columns:
+      1fr calc(min(var(--wrapper-measure), 100%) - 2 * var(--wrapper-gutter))
+      1fr;
   }
 
   .wrapper > * {
