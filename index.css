@@ -19,17 +19,45 @@
     max-inline-size: none;
   }
 
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+  /* @link https://utopia.fyi/type/calculator?c=375,16,1.2,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
   :root {
-    --step--2: clamp(0.69rem, calc(0.65rem + 0.21vw), 0.8rem);
-    --step--1: clamp(0.83rem, calc(0.77rem + 0.33vw), 1rem);
-    --step-0: clamp(1rem, calc(0.9rem + 0.49vw), 1.25rem);
-    --step-1: clamp(1.2rem, calc(1.06rem + 0.71vw), 1.56rem);
-    --step-2: clamp(1.44rem, calc(1.24rem + 1vw), 1.95rem);
-    --step-3: clamp(1.73rem, calc(1.45rem + 1.39vw), 2.44rem);
-    --step-4: clamp(2.07rem, calc(1.69rem + 1.91vw), 3.05rem);
-    --step-5: clamp(2.49rem, calc(1.97rem + 2.59vw), 3.82rem);
+    --step--2: clamp(0.69rem, calc(0.64rem + 0.22vw), 0.8rem);
+    --step--1: clamp(0.83rem, calc(0.75rem + 0.35vw), 1rem);
+    --step-0: clamp(1rem, calc(0.88rem + 0.52vw), 1.25rem);
+    --step-1: clamp(1.2rem, calc(1.02rem + 0.76vw), 1.56rem);
+    --step-2: clamp(1.44rem, calc(1.19rem + 1.07vw), 1.95rem);
+    --step-3: clamp(1.73rem, calc(1.38rem + 1.49vw), 2.44rem);
+    --step-4: clamp(2.07rem, calc(1.59rem + 2.05vw), 3.05rem);
+    --step-5: clamp(2.49rem, calc(1.84rem + 2.78vw), 3.82rem);
+  }
+
+  /* @link https://utopia.fyi/space/calculator?c=375,16,1.2,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+  :root {
+    --space-3xs: clamp(0.25rem, calc(0.22rem + 0.13vw), 0.31rem);
+    --space-2xs: clamp(0.5rem, calc(0.44rem + 0.26vw), 0.63rem);
+    --space-xs: clamp(0.75rem, calc(0.66rem + 0.39vw), 0.94rem);
+    --space-s: clamp(1rem, calc(0.88rem + 0.52vw), 1.25rem);
+    --space-m: clamp(1.5rem, calc(1.32rem + 0.78vw), 1.88rem);
+    --space-l: clamp(2rem, calc(1.75rem + 1.05vw), 2.5rem);
+    --space-xl: clamp(3rem, calc(2.63rem + 1.57vw), 3.75rem);
+    --space-2xl: clamp(4rem, calc(3.51rem + 2.09vw), 5rem);
+    --space-3xl: clamp(6rem, calc(5.26rem + 3.14vw), 7.5rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(0.07rem + 0.78vw), 0.63rem);
+    --space-2xs-xs: clamp(0.5rem, calc(0.29rem + 0.92vw), 0.94rem);
+    --space-xs-s: clamp(0.75rem, calc(0.5rem + 1.05vw), 1.25rem);
+    --space-s-m: clamp(1rem, calc(0.57rem + 1.83vw), 1.88rem);
+    --space-m-l: clamp(1.5rem, calc(1.01rem + 2.09vw), 2.5rem);
+    --space-l-xl: clamp(2rem, calc(1.14rem + 3.66vw), 3.75rem);
+    --space-xl-2xl: clamp(3rem, calc(2.02rem + 4.18vw), 5rem);
+    --space-2xl-3xl: clamp(4rem, calc(2.28rem + 7.32vw), 7.5rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1rem, calc(0.26rem + 3.14vw), 2.5rem);
+    --space-s-xl: clamp(1rem, calc(-0.96rem + 8.37vw), 5rem);
   }
 
   body {
@@ -50,4 +78,28 @@
 }
 
 @tailwind components;
+
 @tailwind utilities;
+
+@layer utilities {
+  :root {
+    --wrapper-measure: theme(screens.lg);
+    --wrapper-gutter: var(--space-s-xl);
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr calc(
+        min(var(--wrapper-measure), 100%) - 2 * var(--wrapper-gutter)
+      ) 1fr;
+  }
+
+  .wrapper > * {
+    grid-column: 2;
+  }
+
+  .wrapper > .full-bleed {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+}
