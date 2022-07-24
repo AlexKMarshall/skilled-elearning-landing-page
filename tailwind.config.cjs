@@ -40,6 +40,25 @@ module.exports = {
       "s-l": "var(--space-s-l)",
       "s-xl": "var(--space-s-xl)",
     },
+    colors: {
+      white: 'hsl(0deg 0% 100%)',
+      grey: {
+        300: 'hsl(232deg 10% 56%',
+        400: 'hsl(234deg 25% 52%)',
+        800: 'hsl(233deg 54% 16%)'
+      },
+      pink: {
+        200: 'hsl(341deg 100% 83%)',
+        400: 'hsl(341deg 92% 62%)',
+        500: 'hsl(322deg 87% 55%)'
+      },
+      blue: {
+        500: 'hsl(237deg 100% 64%)'
+      },
+      orange: {
+        400: 'hsl(13deg 100% 64%)'
+      }
+    },
     extend: {},
   },
   plugins: [],
