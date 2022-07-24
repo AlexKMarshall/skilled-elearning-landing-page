@@ -58,6 +58,7 @@
     /* Custom pairs */
     --space-s-l: clamp(1rem, calc(0.26rem + 3.14vw), 2.5rem);
     --space-s-xl: clamp(1rem, calc(-0.96rem + 8.37vw), 5rem);
+    --space-2xs-m: clamp(0.5rem, calc(-0.17rem + 2.88vw), 1.88rem);
   }
 
   body {
@@ -89,7 +90,7 @@
 
 @layer utilities {
   :root {
-    --wrapper-measure: theme(screens.lg);
+    --wrapper-measure: theme(screens.xl);
     --wrapper-gutter: var(--space-s-xl);
   }
 
@@ -107,5 +108,10 @@
   .wrapper > .full-bleed {
     width: 100%;
     grid-column: 1 / -1;
+  }
+
+  .fluid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
