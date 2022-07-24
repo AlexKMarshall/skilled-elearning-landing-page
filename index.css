@@ -79,6 +79,12 @@
 
 @tailwind components;
 
+@layer components {
+  .button {
+    @apply relative inline-flex items-center overflow-hidden rounded-full bg-grey-800 py-xs px-m font-semi-bold leading-none text-white before:absolute before:inset-0 before:bg-white before:opacity-0 hover:before:opacity-50 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-grey-800;
+  }
+}
+
 @tailwind utilities;
 
 @layer utilities {
