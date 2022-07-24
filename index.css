@@ -62,19 +62,25 @@
   }
 
   body {
-    @apply text-base;
+    @apply text-base text-grey-300;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold text-grey-800;
   }
 
   h1 {
-    @apply text-4xl font-bold;
+    @apply text-4xl;
   }
 
   h2 {
-    @apply text-xl font-bold;
+    @apply text-xl;
   }
 
   h3 {
-    @apply text-lg font-bold;
+    @apply text-lg;
   }
 }
 
@@ -83,6 +89,10 @@
 @layer components {
   .button {
     @apply relative inline-flex items-center overflow-hidden rounded-full bg-grey-800 py-xs px-m font-semi-bold leading-none text-white before:absolute before:inset-0 before:bg-white before:opacity-0 hover:before:opacity-50 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-grey-800;
+  }
+
+  .link {
+    @apply font-semi-bold text-pink-400;
   }
 }
 
@@ -112,6 +122,6 @@
 
   .fluid-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   }
 }
