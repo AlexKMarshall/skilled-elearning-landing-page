@@ -44,6 +44,7 @@ module.exports = {
     colors: {
       white: "hsl(0deg 0% 100%)",
       grey: {
+        100: "hsl(234deg 100% 97%)",
         300: "hsl(232deg 10% 56%)",
         400: "hsl(234deg 25% 52%)",
         800: "hsl(233deg 54% 16%)",
