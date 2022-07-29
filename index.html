@@ -16,7 +16,7 @@
     />
     <title>Skilled</title>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <div class="wrapper">
       <header class="mt-s-m flex items-center justify-between">
         <svg
@@ -44,15 +44,18 @@
           >
         </div>
         <div
-          class="isolate grid w-fit grid-cols-2 justify-self-center md:col-span-2"
+          class="relative -z-10 grid w-fit grid-cols-2 justify-self-center md:col-span-2"
         >
+          <div
+            class="absolute left-[50%] bottom-m -z-20 hidden h-[100vh] w-[100vw] overflow-hidden before:absolute before:-bottom-lg before:h-4xl before:w-full before:origin-bottom-left before:-rotate-45 before:rounded-full before:bg-gradient-to-r before:from-pink-500 before:via-blue-500 before:to-blue-500 md:block"
+          ></div>
           <div
             class="-z-10 col-span-full col-start-1 row-start-1 row-end-3 mx-l-xl my-m grid aspect-square content-end overflow-hidden rounded-full bg-gradient-to-b from-orange-400 to-pink-500 pt-2xl md:aspect-auto"
           >
             <img
               src="/assets/image-hero.png"
               class="translate-y-[30%] md:transform-none"
-              alt="Long brown haired woman blowing on a white mug. Two information boxes surround her stating 'Course hours 1451' and 'Members 29k'"
+              alt="Woman with long brown hair blowing on a white mug while sitting at a laptop."
               width="350"
               height="483"
               loading="eager"

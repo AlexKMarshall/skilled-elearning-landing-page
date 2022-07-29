@@ -29,6 +29,7 @@ module.exports = {
       xl: "var(--space-xl)",
       "2xl": "var(--space-2xl)",
       "3xl": "var(--space-3xl)",
+      "4xl": "var(--space-4xl)",
       "3xs-2xs": "var(--space-3xs-2xs)",
       "2xs-xs": "var(--space-2xs-xs)",
       "xs-s": "var(--space-xs-s)",
