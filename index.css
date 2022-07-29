@@ -59,6 +59,7 @@
     --space-s-l: clamp(1rem, calc(0.26rem + 3.14vw), 2.5rem);
     --space-s-xl: clamp(1rem, calc(-0.96rem + 8.37vw), 5rem);
     --space-2xs-m: clamp(0.5rem, calc(-0.17rem + 2.88vw), 1.88rem);
+    --space-l-3xl: clamp(2rem, calc(-0.7rem + 11.5vw), 7.5rem);
   }
 
   body {
@@ -93,6 +94,11 @@
 
   .link {
     @apply font-semi-bold text-pink-400 hover:text-pink-200;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
   }
 }
 

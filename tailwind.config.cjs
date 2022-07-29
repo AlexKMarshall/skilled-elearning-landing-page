@@ -40,6 +40,7 @@ module.exports = {
       "2xs-m": "var(--space-2xs-m)",
       "s-l": "var(--space-s-l)",
       "s-xl": "var(--space-s-xl)",
+      "l-3xl": "var(--space-l-3xl)",
     },
     colors: {
       white: "hsl(0deg 0% 100%)",
