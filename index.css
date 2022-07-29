@@ -92,7 +92,7 @@
   }
 
   .link {
-    @apply font-semi-bold text-pink-400;
+    @apply font-semi-bold text-pink-400 hover:text-pink-200;
   }
 }
 
@@ -118,6 +118,14 @@
   .wrapper > .full-bleed {
     width: 100%;
     grid-column: 1 / -1;
+  }
+
+  .wrapper > .bleed-right {
+    grid-column: 2 / -1;
+  }
+
+  .wrapper > .bleed-left {
+    grid-column: 1 / 3;
   }
 
   .fluid-grid {
